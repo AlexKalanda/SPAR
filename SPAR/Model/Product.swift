@@ -26,6 +26,9 @@ class Product: Identifiable {
     var totalPrice: Double {
         Double(priceBig * count)
     }
+    var totalOldPrice: Double {
+        oldPrice * Double(count)
+    }
     
     init(image: String, rating: Double, reviewCount: Int, title: String, country: String, description: Bool, like: Bool, priceBig: Int, priceSmal: Int, oldPrice: Double, lableSale: Bool, lableNew: Bool, salePercent: Bool, count: Int) {
         self.image = image

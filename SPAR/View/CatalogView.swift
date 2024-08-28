@@ -62,6 +62,17 @@ struct RowCartProduct: View {
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 144,height: 144)
+                            if tapButton {
+                                ZStack {
+                                    Rectangle()
+                                        .background(.black).opacity(0.4)
+                                        .clipShape(.rect(cornerRadius: 16))
+                                    Text(product.count.description)
+                                        .foregroundStyle(.white).opacity(0.8)
+                                        .font(.system(size: 50))
+                                }
+                                
+                            }
                             if product.lableNew {
                                 RowLabelNew()
                             } else if product.lableSale {
@@ -74,6 +85,8 @@ struct RowCartProduct: View {
                         }
                     }
                 }
+                
+                
                 
                 VStack(alignment: .leading){
                     VStack(alignment: .leading){
