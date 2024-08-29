@@ -10,6 +10,7 @@ import SwiftUI
 struct TabBarView: View {
     @StateObject var viewModel = ViewModel()
     var body: some View {
+        // MARK: кастомный таббар
         TabView {
             NavigationStack {
                 CatalogView()
