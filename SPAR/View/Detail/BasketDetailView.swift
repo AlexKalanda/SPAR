@@ -77,7 +77,7 @@ struct BasketDetailView: View {
                     Text(product.totalOldPrice.twoDigits())
                         .font(.system(size: 12))
                         .strikethrough(true,color: .black)
-                    Text(product.totalPrice.description)
+                    Text(product.totalPrice.twoDigits())
                         .font(.system(size: 16)).bold()
                 }
             }
@@ -87,4 +87,9 @@ struct BasketDetailView: View {
     }
 }
 
+
+#Preview {
+    BasketDetailView(product: .init(image: "bread", rating: 4.1, reviewCount: 12, title: "Багет 400 г.", country: "Россия 🇷🇺", description: false, like: false, priceBig: 100, priceSmal: 40, price: 100.40, oldPrice: 123.40, lableSale: false, lableNew: false, salePercent: false, count: 1, trash: false))
+        .environmentObject(ViewModel())
+}
 

@@ -24,6 +24,10 @@
 		84B9D1E62C7FC122007984C7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9D1E52C7FC122007984C7 /* Product.swift */; };
 		84B9D1E82C80FB20007984C7 /* BasketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9D1E72C80FB20007984C7 /* BasketDetailView.swift */; };
 		84B9D1EB2C80FC34007984C7 /* RowCartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9D1EA2C80FC33007984C7 /* RowCartProduct.swift */; };
+		84B9D1ED2C837C6F007984C7 /* CellCardProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9D1EC2C837C6F007984C7 /* CellCardProduct.swift */; };
+		84B9D1EF2C837DC2007984C7 /* CellLabelSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9D1EE2C837DC2007984C7 /* CellLabelSale.swift */; };
+		84B9D1F12C837E0B007984C7 /* CellLabelNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9D1F02C837E0B007984C7 /* CellLabelNew.swift */; };
+		84B9D1F32C837ED4007984C7 /* FavoritDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9D1F22C837ED4007984C7 /* FavoritDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		84B9D1E52C7FC122007984C7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		84B9D1E72C80FB20007984C7 /* BasketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketDetailView.swift; sourceTree = "<group>"; };
 		84B9D1EA2C80FC33007984C7 /* RowCartProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCartProduct.swift; sourceTree = "<group>"; };
+		84B9D1EC2C837C6F007984C7 /* CellCardProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCardProduct.swift; sourceTree = "<group>"; };
+		84B9D1EE2C837DC2007984C7 /* CellLabelSale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLabelSale.swift; sourceTree = "<group>"; };
+		84B9D1F02C837E0B007984C7 /* CellLabelNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLabelNew.swift; sourceTree = "<group>"; };
+		84B9D1F22C837ED4007984C7 /* FavoritDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,8 @@
 			children = (
 				84B9D1D82C7B8D4B007984C7 /* RowLabelNew.swift */,
 				84B9D1DA2C7B8DA5007984C7 /* RowLabelSale.swift */,
+				84B9D1EE2C837DC2007984C7 /* CellLabelSale.swift */,
+				84B9D1F02C837E0B007984C7 /* CellLabelNew.swift */,
 			);
 			path = "LabelNew&Sale";
 			sourceTree = "<group>";
@@ -174,6 +184,8 @@
 			children = (
 				84B9D1E72C80FB20007984C7 /* BasketDetailView.swift */,
 				84B9D1EA2C80FC33007984C7 /* RowCartProduct.swift */,
+				84B9D1EC2C837C6F007984C7 /* CellCardProduct.swift */,
+				84B9D1F22C837ED4007984C7 /* FavoritDetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -249,16 +261,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B9D1E62C7FC122007984C7 /* Product.swift in Sources */,
+				84B9D1F32C837ED4007984C7 /* FavoritDetailView.swift in Sources */,
 				84B9D1E82C80FB20007984C7 /* BasketDetailView.swift in Sources */,
 				84B9D1DF2C7B9769007984C7 /* ExtensionDouble.swift in Sources */,
 				84B9D1D72C7B8692007984C7 /* ViewModel.swift in Sources */,
 				84B9D1D92C7B8D4B007984C7 /* RowLabelNew.swift in Sources */,
+				84B9D1EF2C837DC2007984C7 /* CellLabelSale.swift in Sources */,
 				84B9D1D02C7B8216007984C7 /* ButtonTileStatus.swift in Sources */,
+				84B9D1F12C837E0B007984C7 /* CellLabelNew.swift in Sources */,
 				84B9D1D52C7B82D1007984C7 /* ButtonListStatus.swift in Sources */,
 				84B9D1C92C7B7C59007984C7 /* BasketView.swift in Sources */,
 				84B9D1C72C7B7C2E007984C7 /* FavoritesView.swift in Sources */,
 				84B9D1EB2C80FC34007984C7 /* RowCartProduct.swift in Sources */,
 				84B9D1DB2C7B8DA5007984C7 /* RowLabelSale.swift in Sources */,
+				84B9D1ED2C837C6F007984C7 /* CellCardProduct.swift in Sources */,
 				84B9D1B82C7B7BA5007984C7 /* TabBarView.swift in Sources */,
 				84B9D1D32C7B8290007984C7 /* ExtentionColor.swift in Sources */,
 				84B9D1C52C7B7C0F007984C7 /* CatalogView.swift in Sources */,

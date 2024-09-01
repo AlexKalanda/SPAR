@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @EnvironmentObject var viewModel: ViewModel
     var body: some View {
-        Text("like")
+        NavigationStack {
+            List {
+                ForEach(viewModel.likes) { iteam in 
+                    FavoritDetailView(product: iteam)
+                }
+            }
+            .listStyle(.plain)
+        }
+        .navigationTitle("Любимые товары")
     }
 }
 
 #Preview {
-    FavoritesView()
+    NavigationStack{
+        FavoritesView()
+            .environmentObject(ViewModel())
+    }
 }

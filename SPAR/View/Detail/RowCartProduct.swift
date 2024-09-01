@@ -111,7 +111,6 @@ struct RowCartProduct: View {
                                 .clipShape(.rect(cornerRadius: 40))
                                 .onTapGesture {
                                     product.trash  = true
-                                    
                                     viewModel.addProductTrash(product)
                                     viewModel.product = product
                                 }
@@ -150,11 +149,12 @@ struct RowCartProduct: View {
                                     Image(systemName: "plus")
                                         .bold()
                                         .padding(.horizontal)
+                                        .padding(.vertical,8)
                                         .background(Color(hex: "15B742"))
                                         .clipShape(Circle())
                                         .onTapGesture {
                                             viewModel.product = product
-                                            product.count += 1
+                                            viewModel.product.count += 1
                                         }
                                 }
                                 .foregroundStyle(.white)
@@ -173,15 +173,20 @@ struct RowCartProduct: View {
                         .frame(width: 16,height: 16)
                         .padding(.horizontal,4)
                         .padding(.bottom,8)
-                    Image(isFavoritShow ? "loveGreen" : "love")
+                    Image(product.like ? "loveGreen" : "love")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 16,height: 16)
                         .padding(.horizontal,4)
                         .padding(.top,8)
                         .onTapGesture {
-                            isFavoritShow.toggle()
-                            //MARK: добавить добавление в любимое 
+                            product.like.toggle()
+                            viewModel.product = product
+                            if viewModel.product.like {
+                                viewModel.addProductLikes(product)
+                            } else {
+                                viewModel.deleteProductLikes(product)
+                            }
                         }
                 }
             }
@@ -192,3 +197,7 @@ struct RowCartProduct: View {
     }
 }
 
+#Preview {
+    RowCartProduct(product: .init(image: "bread", rating: 4.1, reviewCount: 12, title: "Багет 400 г.", country: "Россия 🇷🇺", description: false, like: false, priceBig: 100, priceSmal: 40, price: 100.40, oldPrice: 123.40, lableSale: false, lableNew: false, salePercent: false, count: 1, trash: true))
+        .environmentObject(ViewModel())
+}
